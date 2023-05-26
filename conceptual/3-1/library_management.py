@@ -85,8 +85,9 @@ while True:
         print("2. Return a book")
         print("3. Borrowed books list")
         print("4. Returned books list")
-        print("5. Donate")
-        print("6. Logout")
+        print("5. Check availability")
+        print("6. Donate")
+        print("7. Logout")
         x=int(input("Give option: "))
         if x==1:
             bookName=input("Book name: ")
@@ -97,12 +98,15 @@ while True:
         elif x==3:
             print(currentUser.borrow_books)
         elif x==4:
-            print(currentUser.returned_books)
+            print(currentUser.returned_book)
         elif x==5:
-            pass
+            for book in library.book_list:
+                print(book)
         elif x==6:
+            pass
+        elif x==7:
             currentUser=None
             match=False    
-            
+        print("\n\n\n")    
             
                 
