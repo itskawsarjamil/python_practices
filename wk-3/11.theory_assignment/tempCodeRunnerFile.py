@@ -1,0 +1,1 @@
+print(sorted(s, key=lambda x: ord(x.lower())-ord('a')))
