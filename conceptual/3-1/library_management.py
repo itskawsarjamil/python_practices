@@ -31,6 +31,24 @@ class Library:
             else:
                 print("This type of any book is not exist in my library")
                 return
+    
+    def returned_book(self,bookName,currentUser):
+        for book in self.book_list:
+            if book == bookName:
+                for bk in currentUser.borrow_books:
+                    if bk==book:
+                        self.book_list[bookName]+=1
+                        currentUser.borrow_books.remove[bookName]
+                        currentUser.returned_books.appened(bookName)
+                        return
+                    else:
+                        print("age ne pore dis")
+                        return
+            else:
+                print("ei boi amar na.kar te anso")
+                return
+                
+    
                 
         
 library=Library({"english":0,"bangla":3,"Math":4})
@@ -69,7 +87,22 @@ while True:
         print("4. Returned books list")
         print("5. Donate")
         print("6. Logout")
-        
+        x=int(input("Give option: "))
+        if x==1:
+            bookName=input("Book name: ")
+            library.borrow_books(bookName,currentUser)
+        elif x==2:
+            bookName=input("Book name: ")
+            library.return_book(bookName,currentUser)
+        elif x==3:
+            print(currentUser.borrow_books)
+        elif x==4:
+            print(currentUser.returned_books)
+        elif x==5:
+            pass
+        elif x==6:
+            currentUser=None
+            match=False    
             
             
                 
