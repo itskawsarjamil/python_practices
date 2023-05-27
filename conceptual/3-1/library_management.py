@@ -47,7 +47,15 @@ class Library:
             else:
                 print("ei boi amar na.kar te anso")
                 return
-                
+    
+    def donate(self,bookName,amount):
+        for book in self.book_list:
+            if book ==bookName:
+                self.book_list[book]+=amount
+                print("Thanks for donating")
+                return
+        self.book_list[bookName]=amount
+        print("Thanks for donating")
     
                 
         
@@ -75,7 +83,14 @@ while True:
             name=input("Name: ")
             roll=int(input("Roll: "))
             password=input("Password: ")
+            for user in allUsers:
+                if user.roll == roll:
+                    print("Bhai koibar account khulba?")
+                    continue
+                
+                
             currentUser=User(name,roll,password)
+            allUsers.append(currentUser)
             
     
     else:
