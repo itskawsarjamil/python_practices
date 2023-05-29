@@ -9,7 +9,7 @@ def fib(n):
 
 start =time.time()
 
-for i in range(35):
+for i in range(905):
     print(i,fib(i))
 
 end=time.time()

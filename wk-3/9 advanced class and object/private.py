@@ -18,3 +18,5 @@ my_user=User('Kawsar','12345678','16514465465')
 print(my_user.name)
 # print(my_user.__get_password())
 print(my_user.user_login('Kawsar','12345678'))
+
+# print(my_user.__dict__)
